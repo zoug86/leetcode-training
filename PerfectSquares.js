@@ -16,52 +16,20 @@
 // Explanation: 13 = 4 + 9.
 
 const numSquares = function(n) {
-    let allSums = [];
-    for(let i = 1; i < Math.sqrt(n); i++){
-        allSums.push(i*i);
-    }
-
-    if(n < 4) return n;
-
-    if(n < 10){
-        
-    }
-
-    let total = 0;
-    let count = 0;
-    let m = 0;
-   
-    for(let j = 1; j < allSums.length; j++){
-        if(n % allSums[j] === 0){
-            return n / allSums[j];
+    if(Math.sqrt(n)*Math.sqrt(n) === n) return 1;
+    for(let i=1;i<=Math.sqrt(n);i++)
+        {
+            let x = n-i*i;
+             if(Math.sqrt(x)*Math.sqrt(x) == x) return 2;
         }
-    }
-        
-    while(total !== n){
-
-       total += allSums[m];
+           while(n%4 === 0)
+        {
+            n = n/4;
+        }
+        if(n%8 === 7)return 4;
        
-        if(total <= n){
-            m++;
-            count++;
-            if(total === n){
-                console.log(total)
-                return count;
-            }
-        }
-        
-        if(total > n){
-            total -= allSums[m];
-             m--;
-             if(total === n){
-               console.log(total)
-                 return count;
-            }
-        }
-    }
-        
-    
-    return count;
+        return 3;
+
 };
 
 numSquares(26);
