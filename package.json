@@ -1,0 +1,21 @@
+{
+  "name": "leetcode-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "PalindromeNumber.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon RomanInteger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoug86/leetcode-training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoug86/leetcode-training/issues"
+  },
+  "homepage": "https://github.com/zoug86/leetcode-training#readme"
+}
