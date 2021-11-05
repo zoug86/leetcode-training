@@ -5,7 +5,7 @@
   "main": "PalindromeNumber.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon RomanInteger.js"
+    "start": "nodemon longestCommonPrefix.js"
   },
   "repository": {
     "type": "git",

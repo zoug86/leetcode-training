@@ -27,7 +27,6 @@
 
 const romanToInt = function (s) {
     const arr = s.split('');
-    console.log(arr);
     let result = 0;
     const values = {
         I: 1,
