@@ -32,9 +32,7 @@ const isValid = function (s) {
                 }
 
         }
-        console.log(stack)
     }
-    //console.log(stack)
     return stack.length === 0;
 };
 

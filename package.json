@@ -5,7 +5,7 @@
   "main": "PalindromeNumber.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon isValid.js"
+    "start": "nodemon mergeTwoLists.js"
   },
   "repository": {
     "type": "git",
