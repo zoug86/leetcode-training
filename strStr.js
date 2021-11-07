@@ -17,28 +17,29 @@ const strStr = function (haystack, needle) {
     if (needle.length > haystack.length) return -1;
     if (needle.length === 0) return 0;
 
-    let arr1 = haystack.split('');
-    let arr2 = needle.split('');
-    for (let i = 0; i < arr1.length; i++) {
-        let count = 0;
-        for (let j = 0; j < arr2.length; j++) {
-            if (arr2[j] === arr1[j + i]) {
-                count++;
-            }
-        }
-        if (count === arr2.length) {
-            return i;
-        }
+    // let arr1 = haystack.split('');
+    // let arr2 = needle.split('');
+    // for (let i = 0; i < arr1.length; i++) {
+    //     let count = 0;
+    //     for (let j = 0; j < arr2.length; j++) {
+    //         if (arr2[j] === arr1[j + i]) {
+    //             count++;
+    //         }
+    //     }
+    //     if (count === arr2.length) {
+    //         return i;
+    //     }
 
-    }
-    return -1;
+    // }
+    // return -1;
+    return haystack.indexOf(needle);
 };
 
-console.log(strStr(haystack = "aaaaaa", needle = "bba"));
-console.log(strStr(haystack = "hellooll", needle = "lol"))
-console.log(strStr(haystack = "hello", needle = "ll"))
-console.log(strStr(haystack = "", needle = ""))
-console.log(strStr(haystack = "", needle = "a"))
-console.log(strStr(haystack = "mississippi", needle = "mississippi"))
+// console.log(strStr(haystack = "aaaaaa", needle = "bba"));
+// console.log(strStr(haystack = "hellooll", needle = "lol"))
+// console.log(strStr(haystack = "hello", needle = "ll"))
+// console.log(strStr(haystack = "", needle = ""))
+// console.log(strStr(haystack = "", needle = "a"))
+// console.log(strStr(haystack = "mississippi", needle = "mississippi"))
 console.log(strStr(haystack = "mississippi", needle = "issip"))
 
