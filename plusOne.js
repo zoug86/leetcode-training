@@ -27,7 +27,7 @@ const plusOne = function (digits) {
             digits[i] = 0;
         }
     }
-    console.log(digits)
+
     return digits;
 };
 
