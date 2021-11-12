@@ -12,21 +12,20 @@
 // Output: false
 // Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
 
-const isPalindrome = function(x) {
-    const str = x.toString();
-    let j = str.length - 1;
-    let count = 0;
-    
-    for(let i = 0; i < Math.floor(str.length / 2); i++) {
-         if(str[i] === str[j]){
-            count++;
-            j--;
-         }
-         else return false;
+const isPalindrome = function (x) {
+    if (x < 0) return false;
+    let y = x;
+    let num;
+    let result = 0;
+    while (y >= 1) {
+        num = y % 10;
+        result = result * 10 + Math.floor(num);
+        y = y / 10;
     }
-    // console.log(str.length/2)
-    if(count === Math.floor(str.length / 2)) return true;
-
+    console.log(result)
+    return result === x;
 };
 
-console.log(isPalindrome(01556465510));
+console.log(isPalindrome(010));
+console.log(isPalindrome(121));
+console.log(isPalindrome(987654321));
