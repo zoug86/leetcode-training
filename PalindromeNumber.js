@@ -15,14 +15,11 @@
 const isPalindrome = function (x) {
     if (x < 0) return false;
     let y = x;
-    let num;
     let result = 0;
     while (y >= 1) {
-        num = y % 10;
-        result = result * 10 + Math.floor(num);
+        result = result * 10 + Math.floor(y % 10);
         y = y / 10;
     }
-    console.log(result)
     return result === x;
 };
 

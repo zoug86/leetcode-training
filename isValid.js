@@ -18,8 +18,7 @@ const isValid = function (s) {
     const stack = [];
 
     for (let i = 0; i < s.length; i++) {
-        let c = s.charAt(i);
-        switch (c) {
+        switch (s[i]) {
             case '(': stack.push(')');
                 break;
             case '[': stack.push(']');
@@ -27,7 +26,7 @@ const isValid = function (s) {
             case '{': stack.push('}');
                 break;
             default:
-                if (c !== stack.pop()) {
+                if (s[i] !== stack.pop()) {
                     return false;
                 }
 
@@ -37,9 +36,9 @@ const isValid = function (s) {
 };
 
 console.log(isValid("{[]}"));
-//console.log(isValid("()[]{}"));
-// console.log(isValid("(]"));
-// console.log(isValid("()"));
-// console.log(isValid("){"));
-//console.log(isValid("(){}}{"));
-// console.log(isValid("[({])}"));
+console.log(isValid("()[]{}"));
+console.log(isValid("(]"));
+console.log(isValid("()"));
+console.log(isValid("){"));
+console.log(isValid("(){}}{"));
+console.log(isValid("[({])}"));
