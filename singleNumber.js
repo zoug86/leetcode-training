@@ -9,14 +9,30 @@
  * @return {number}
  */
 const singleNumber = function (nums) {
-    nums.sort((a, b) => a - b)
-
+    // First Solution
+    // let obj = {};
+    // for (let i = 0; i < nums.length; i++) {
+    //     if (obj[nums[i]]) {
+    //         obj[nums[i]] += 1;
+    //     } else {
+    //         obj[nums[i]] = 1;
+    //     }
+    // }
+    // for (key in obj) {
+    //     if (obj[key] === 1) {
+    //         return key;
+    //     }
+    // }
+    // Second Solution
+    nums.sort((a, b) => a - b);
+    console.log(nums)
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] === nums[i + 1]) {
             continue;
         } else {
+            if (i === 0) return nums[i];
             if (nums[i + 1] === nums[i + 2]) {
-                return nums[i];
+                continue;
             } else {
                 return nums[i + 1];
             }
